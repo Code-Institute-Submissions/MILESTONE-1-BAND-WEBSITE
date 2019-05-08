@@ -257,45 +257,69 @@
         </div>
       </div>
       <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-              <form id="contact-form" name="contact-form" action="#" method="POST">
-                  <div class="row">
-                      <div class="col-md-6">
-                          <div class="md-form mb-0">
-                              <input type="text" id="name" name="name" placeholder="Your Name" class="form-control margin-top-section">
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="md-form mb-0">
-                              <input type="text" id="email" name="email" placeholder="Your email"class="form-control margin-top-section">
-                          </div>
-                      </div>
+        <div class="col-lg-8 text-center">
+          <form id="contact-form" name="contact-form" class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input type="text" id="name" name="name" placeholder="Your Name"
+                    class="form-control margin-top-section" required>
+                  <div class="invalid-tooltip">
+                    Please choose a Name.
                   </div>
-                  <div class="row">
-                      <div class="col-md-12">
-                          <div class="md-form mb-0">
-                              <input type="text" id="subject" name="subject" placeholder="Subject" class="form-control margin-top-section">
-                          </div>
-                      </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input type="email" id="email" name="email" placeholder="Your email"
+                    class="form-control margin-top-section" required>
+                  <div class="invalid-tooltip">
+                    Please write a valid email.
                   </div>
-                  <div class="row">
-                      <div class="col-md-12">
-                          <div class="md-form">
-                              <textarea type="text" id="message" name="message" placeholder="Your message" rows="4" class="form-control md-textarea margin-top-section"></textarea>
-                          </div>
-                      </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="md-form mb-0">
+                  <input type="text" id="subject" name="subject" placeholder="Subject"
+                    class="form-control margin-top-section" required>
+                  <div class="invalid-tooltip">
+                    Please choose a subject.
                   </div>
-                  <div class="row justify-content-center">
-                      <div class="col-sm-10 text-center">
-                        <button type="submit" class="btn btn-primary btn-red margin-next-section margin-top-section">Submit your message</button>
-                      </div>
-                    </div>
-              </form>
-          </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="md-form">
+                  <textarea type="text" id="message" name="message" placeholder="Your message" rows="4"
+                    class="form-control md-textarea margin-top-section" required></textarea>
+                  <div class="invalid-tooltip">
+                    Please write a message.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-sm-10 text-center">
+                <button type="submit" class="btn btn-primary btn-red margin-next-section margin-top-section">Submit your
+                  message</button>
+              </div>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
-
   </section>
+  <div id="success" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog"
+    aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <h3>Success</h3>
+      </div>
+    </div>
+  </div>
   <footer>
     <div class="container-fluid">
       <div class="row justify-content-md-center">
@@ -318,6 +342,30 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script>
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        var forms = document.getElementsByClassName('needs-validation');
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+              form.classList.add('was-validated');
+            }
+            else if (form.checkValidity() == true) {
+              $('#success').modal("show");
+              event.preventDefault();
+              event.stopPropagation();
+              form.reset();
+              form.classList.remove('was-validated');
+            }
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
 </body>
 
 </html>

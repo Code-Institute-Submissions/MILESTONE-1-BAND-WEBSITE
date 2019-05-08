@@ -1,32 +1,31 @@
-# MILESTONE-1-BAND-WEBSITE
+# Band Website "The Monkees"
 
-One or two paragraphs providing an overview of your project.
+This is a MILESTONE project from the course Fullstack Web Developer from Code Institute.
+Using the content learned from HTML5 CSS3 and User Centric Frontend Development modules from the course.
 
-Essentially, this part is your sales pitch.
+This project consist in produce a Website for the band "The Monkees" with the knowledge adquired in these modules
  
 ## UX
  
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+After visit other bands Websites I get some Ideia of what these Websites want archieve.
+With this I understand about the menu types they are using today and how archieve a good user experience while browse the website.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+I choose to use the sticky menu on this website with the logo in the center.
+After this I added some hover effects in the text and image. And I revert the logo image using a red instead yellow.
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+In some bands websites I saw the ideia to use "cards" from bootstrap to play the music, while this website doesn't have many music, I can use just the cards without the carrousel effect from b4
+
+The Wireframe can be founded in the wireframe folder.
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
-### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- Hover effects from the menu
+- Music cards
+- Video Clip
+- contact form with b4
 
 ### Features Left to Implement
-- Another feature idea
+- lightbox with the videos of the band
 
 ## Technologies Used
 
@@ -35,47 +34,41 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
 
+- [Bootstrap 4](https://getbootstrap.com)
+    - The project uses **Bootstrap** to better layout manipulation(with grids and cards).
+
+- [HTML5](https://getbootstrap.com)
+    - The project uses **HTML5** to create the estructure and add features like audio and videos.
+
+- [CSS3](https://getbootstrap.com)
+    - The project uses **CSS3** to convert the polygon layout to something more beautifull.
+
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+The Website is testes in many browsers and in android mobile devices.
+I asked for some co-workers to navigate in the website to check how they feel and if there is any error.
+I tested the forms with a default tests write down in this document.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+1. Try to submit the empty form and verify that an error message about the required fields appears
+2. Try to submit the form with an invalid email address and verify that a relevant error message appears
+3. Try to submit the form with all inputs valid and verify that a success message appears.
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
+This website is deployed in github pages: [The Monkees Band Website](https://philip-carneiro.github.io/MILESTONE-1-BAND-WEBSITE/)
 
 
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- The text for section About was copied from the [Wikipedia The Monkees](https://en.wikipedia.org/wiki/The_Monkees)
 
 ### Media
-- The photos used in this site were obtained from ...
+- The photos used in this site were obtained from repository from the milestone project
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received inspiration for this project from The Queen, Radwimps, Kobasolo, The Beetles, KISS Websites
